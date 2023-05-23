@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="baseLayout" template="/WEB-INF/layouts/template/base.jsp">
+	<put-attribute name="titolo" value="" />
+	<put-attribute name="content" value="" />
+	<put-attribute name="footer" value="/WEB-INF/layouts/template/footer.jsp" />
+	</definition>
+	
+	<definition name="index" extends="baseLayout">
+		<put-attribute name="titolo" value="Benvenuti in RentAPP" />
+		<put-attribute name="content" value="/WEB-INF/view/welcome.jsp" />
+	</definition>
+	
+	<definition name="veicoli" extends="baseLayout">
+	<put-attribute name="titolo" value="Ricerca Veico" />
+	<put-attribute name="content" value="/WEB-INF/view/veicoli.jsp" />
+	</definition>
+	
+	
+	
+	<definition name="chisiamo" extends="baseLayout">
+	<put-attribute name="titolo" value="Chi siamo?" />
+	<put-attribute name="content" value="/WEB-INF/view/chisiamo.jsp" />
+	</definition>
+	
+	<definition name="insVeicolo" extends="baseLayout">
+	<put-attribute name="titolo" value="Inserimento nuovo veicolo" />
+	<put-attribute name="content" value="/WEB-INF/view/insveicolo.jsp" />
+	</definition>
+
+
+
+
+	<definition name="baseLogIn" template="/WEB-INF/layouts/template/baseLogin.jsp">
+		<put-attribute name="titolo" value="" />
+		<put-attribute name="content" value="" />
+	</definition>
+
+	<definition name="login" extends="baseLogIn">
+		<put-attribute name="titolo" value="Accesso al Sito" />
+		<put-attribute name="content" value="/WEB-INF/view/login.jsp" />
+	</definition>
+
+	<definition name="clienti" extends="baseLayout">
+		<put-attribute name="titolo" value="Ricerca Clienti" />
+		<put-attribute name="content" value="/WEB-INF/view/clienti.jsp" />
+	</definition>
+
+	<definition name="insCliente" extends="baseLayout">
+		<put-attribute name="titolo" value="Registrazione" />
+		<put-attribute name="content" value="/WEB-INF/view/signup.jsp"/>
+	</definition>
+
+
+
+	<definition name="dashgestore" extends="baseLayout">
+		<put-attribute name="titolo" value="Dash gestore" />
+		<put-attribute name="content" value="/WEB-INF/view/dashgestore.jsp" />
+	</definition>
+
+
+	<definition name="insParco" extends="baseLayout">
+		<put-attribute name="titolo" value="Crea Nuovo Parco" />
+		<put-attribute name="content" value="/WEB-INF/view/creaparcoauto.jsp"/>
+	</definition>
+
+	<definition name="insPrenotazione" extends="baseLayout">
+		<put-attribute name="titolo" value="Visualizza Prenotazioni" />
+		<put-attribute name="content" value="/WEB-INF/view/visualizzaprenotazioni.jsp"/>
+	</definition>
+
+	<definition name="dashcliente" extends="baseLayout">
+		<put-attribute name="titolo" value="Dash cliente" />
+		<put-attribute name="content" value="/WEB-INF/view/dashcliente.jsp" />
+	</definition>
+
+	<definition name="insPreno" extends="baseLayout">
+		<put-attribute name="titolo" value="Dash cliente" />
+		<put-attribute name="content" value="/WEB-INF/view/inspreno.jsp" />
+	</definition>
+
+	<definition name="cercaLuogo" extends="baseLayout">
+		<put-attribute name="titolo" value="Dash Automobili" />
+		<put-attribute name="content" value="/WEB-INF/view/VistaVeicoli.jsp" />
+	</definition>
+
+
+	<definition name="pagamento" extends="baseLayout">
+		<put-attribute name="titolo" value="Dash Automobili" />
+		<put-attribute name="content" value="/WEB-INF/view/payment.jsp" />
+	</definition>
+	
+	<definition name="SuccessPay" extends="baseLayout">
+		<put-attribute name="titolo" value="Dash Automobili" />
+		<put-attribute name="content" value="/WEB-INF/view/successo.jsp" />
+	</definition>
+	
+	<definition name="ErrorPay" extends="baseLayout">
+		<put-attribute name="titolo" value="Dash Automobili" />
+		<put-attribute name="content" value="/WEB-INF/view/errore.jsp" />
+	</definition>
+	
+	<definition name="formcarta" extends="baseLayout">
+		<put-attribute name="titolo" value="Dash Automobili" />
+		<put-attribute name="content" value="/WEB-INF/view/daticarta.jsp" />
+	</definition>
+	
+	<definition name="Segnalazioni" extends="baseLayout">
+		<put-attribute name="titolo" value="Dash Automobili" />
+		<put-attribute name="content" value="/WEB-INF/view/segnalazione.jsp" />
+	</definition>
+	
+	<definition name="logout" extends="baseLayout">
+		<put-attribute name="titolo" value="Logout" />
+		<put-attribute name="content" value="/WEB-INF/view/logout.jsp" />
+	</definition>
+</tiles-definitions>

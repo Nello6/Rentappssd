@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://xmlns.jcp.org/xml/ns/javaee/" 
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+
+  <module-name>RentApp</module-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+   <!-- Gestore -->
+   <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>gestore</web-resource-name>
+            <url-pattern>/dashgestore/*</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>GESTORE</role-name>
+        </auth-constraint>
+    </security-constraint>
+    
+    <!-- Cliente -->
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>cliente</web-resource-name>
+            <url-pattern>/dashcliente/*</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>CLIENTE</role-name>
+        </auth-constraint>
+    </security-constraint>
+       
+
+    <login-config>
+        <auth-method>BASIC</auth-method>
+        <realm-name>this is ignored currently</realm-name>
+    </login-config>
+
+
+    <security-role>
+        <role-name>GESTORE</role-name>
+    </security-role>
+     <security-role>
+        <role-name>CLIENTE</role-name>
+    </security-role>
+    
+    <error-page>
+    	<error-code>403</error-code>
+    	<location>/errore.jsp</location>
+	</error-page>
+</web-app>

@@ -1,0 +1,11 @@
+{
+  "realm": "RentApp",
+  "auth-server-url": "http://localhost:8080/",
+  "ssl-required": "external",
+  "resource": "rentapp_client",
+  "verify-token-audience": true,
+  "credentials": {
+    "secret": "x700st2fvFeECegzHhLxHe7Nqm30asl7"
+  },
+  "confidential-port": 0
+}
